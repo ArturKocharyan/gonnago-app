@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
+import { getMenu, getMenuStatus } from './redux/slices/menuSlice';
+import Navigation from './pages/Navigation/Navigation';
+import Menu from './pages/Menu/Menu';
 
 function App() {
+
+  const dispatch = useDispatch()
+  const menuStatus = useSelector(getMenuStatus)
+
+  useEffect(() => {
+    if (menuStatus === 'idle') {
+      dispatch(getMenu());
+    }
+  }, [menuStatus, dispatch]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <Menu />
     </div>
   );
 }
