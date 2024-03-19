@@ -46,6 +46,14 @@ function CitesDropDown({ list }) {
     };
     const groupedCities = groupByFirstLetter(citiesData);
 
+    const filteredCities = Object.entries(groupedCities).reduce((acc, [letter, cities]) => {
+        const filtered = cities.filter(city => city.alias.toLowerCase().includes(inputValue.toLowerCase()));
+        if (filtered.length > 0) {
+            acc[letter] = filtered;
+        }
+        return acc;
+    }, {});
+
     useEffect(() => {
         if (inputValue.length !== 0) {
             setIsActive(true)
@@ -65,9 +73,11 @@ function CitesDropDown({ list }) {
                     <div className={style.headerContainer}>
                         <div className={style.searchContainer} >
                             <span className={style.loopSpan} ><BsSearch /></span>
-                            <input onChange={(e) => {
-                                setInputValue(e.target.value)
-                            }} />
+                            <input 
+                                value={inputValue}
+                                onChange={(e) => {
+                                    setInputValue(e.target.value)
+                                }} />
                             <span
                                 onClick={() => {
                                     setInputValue('')
@@ -92,7 +102,7 @@ function CitesDropDown({ list }) {
                     </div>
                     <Divider />
                     <div className={style.listContainer} >
-                        {Object.entries(groupedCities)?.map(([letter, cities]) => (
+                        {Object.entries(filteredCities)?.map(([letter, cities]) => (
                             <ul key={letter}>
                                 <li className={style.upperLetter} >{letter}</li>
                                 {cities?.map(city => (
@@ -115,4 +125,4 @@ function CitesDropDown({ list }) {
     )
 }
 
-export default CitesDropDown
+export default CitesDropDown;
