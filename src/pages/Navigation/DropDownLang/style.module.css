@@ -1,0 +1,9 @@
+.dropDiv .ant-dropdown-trigger .ant-dropdown-trigger {
+    display: flex;
+    justify-content: space-between;
+    width: 46px;
+}
+.icon {
+    display: flex;
+    margin-top: 8%;
+}

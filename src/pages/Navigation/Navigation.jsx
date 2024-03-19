@@ -3,6 +3,7 @@ import logo from '../../assets/img/image2.svg'
 import search from '../../assets/img/Search2.svg'
 import { RiCloseCircleFill } from "react-icons/ri"
 import style from './style.module.css'
+import DropDownLang from "./DropDownLang/DropDownLang";
 
 function Navigation() {
 
@@ -26,6 +27,7 @@ function Navigation() {
                 <div className={style.countriesContainer} >
                     Erevan
                 </div>
+                
             </div>
             <div className={style.searchContainer} >
                 <span> <img src={search} alt='search'/> </span>
@@ -37,7 +39,7 @@ function Navigation() {
             </div>
             <div className={style.accountContainer} >
                 <div className={style.lengContainer}>
-                    <button></button>
+                    <DropDownLang />
                 </div>
                 <div className={style.singContainer}>
                     <button>Sing In</button>

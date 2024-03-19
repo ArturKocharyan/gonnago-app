@@ -82,3 +82,9 @@ input:focus {
 	outline: inherit;
     margin-bottom: 6%;
 }
+
+.lengContainer {
+    display: flex;
+    padding-top: 6%;
+    height: 21px;
+}
