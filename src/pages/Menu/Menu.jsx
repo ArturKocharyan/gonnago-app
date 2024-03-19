@@ -7,7 +7,7 @@ function Menu() {
 
     const menuItems = useSelector((state) => state.menu)
     const [selectItemId, setSelectItemId] = useState(1)
-    const [navChilds, setNavChilds] = useState([])
+    const [navChilds, setNavChilds] = useState(menuItems.menu.data[0].childs)
 
     return (
         <div>
