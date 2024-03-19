@@ -40,6 +40,7 @@
     height: 70%;
     margin-top: 1%;
     width: 98%;
+    margin-right: 2%;
 }
 
 input:focus {
@@ -79,4 +80,5 @@ input:focus {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+    margin-bottom: 6%;
 }

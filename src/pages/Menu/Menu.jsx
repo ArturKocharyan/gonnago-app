@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import polygone from '../../assets/img/Polygon1.svg'
 import Categories from "./Categories/Categories";
 import style from "./style.module.css"
 
@@ -28,10 +27,10 @@ function Menu() {
                                     <div
                                         className={selectItemId === item.id ? style.selectItem : style.menuItems}
                                     >{item.title}
+                                    </div  >
+                                    <div className={style.containerSpan} >
+                                      <div className={selectItemId === item.id ? style.selectMenuSpan : style.menuSpan} />
                                     </div>
-                                    <span className={selectItemId === item.id ? style.selectMenuSpan : style.menuSpan} >
-                                        <img src={polygone} alt='polygone' />
-                                    </span>
                                 </div>
                             )
                         })
