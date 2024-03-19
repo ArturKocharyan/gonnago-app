@@ -6,31 +6,30 @@ import { BsSearch } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
 
+const headerCities = [
+    {
+        id: 1,
+        title: "Armenia"
+    },
+    {
+        id: 2,
+        title: "Gyumri",
+    },
+    {
+        id: 3,
+        title: "Yerevan"
+    },
+    {
+        id: 4,
+        title: "Vanadzor"
+    }
+]
+
 function CitesDropDown({ list }) {
 
     const [inputValue, setInputValue] = useState('')
     const [isActive, setIsActive] = useState(false)
-    const [title, setTitle] = useState('Armenia')
-
-    const headerCities = [
-        {
-            id: 1,
-            title: "Armenia"
-        },
-        {
-            id: 2,
-            title: "Gyumri",
-        },
-        {
-            id: 3,
-            title: "Yerevan"
-        },
-        {
-            id: 4,
-            title: "Vanadzor"
-        }
-    ]
-
+    const [title, setTitle] = useState(headerCities[0].title)
     const citiesData = list.cities.data;
 
     const groupByFirstLetter = (cities) => {

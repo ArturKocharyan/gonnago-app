@@ -5,6 +5,7 @@ import { getMenu, getMenuStatus } from './redux/slices/menuSlice';
 import Navigation from './pages/Navigation/Navigation';
 import Menu from './pages/Menu/Menu';
 import { getCities, getCitiesStatus } from './redux/slices/citiesSlice';
+import Footer from './pages/Footer/Footer';
 
 function App() {
 
@@ -27,6 +28,8 @@ function App() {
     <div className="App">
       <Navigation />
       <Menu />
+      <div style={{display:"block", height: '500px'}} ></div>
+      <Footer />
     </div>
   );
 }

@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     white-space: break-spaces;
+    flex-wrap: wrap;
 }
 
 .itemsDiv{
@@ -28,4 +29,5 @@
     padding-left: 5px;
     padding-right: 5px;
     font-family: Montserrat arm;
+    margin-top: 5px;
 }

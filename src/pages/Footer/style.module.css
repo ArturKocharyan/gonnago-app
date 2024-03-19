@@ -1,0 +1,14 @@
+.footerContainer {
+    display: flex;
+    height: 526px;
+    background-color: #e3e2e0;
+    max-width: 1215px;
+    margin: 20px auto 0;
+    width: 100%;
+    display: flex;
+    padding: 5%;
+}
+
+.firstDiv {
+
+}
