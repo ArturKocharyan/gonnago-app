@@ -36,11 +36,17 @@ function Navigation() {
                 <span> <img src={search} alt='search'/> </span>
                 <input 
                 placeholder="MOVE"
+                value={inputValue}
                 onChange={(e)=>{
                     e.preventDefault()
                     setInputValue(e.target.value)
                 }} />
-                <span className={!inputIsEmpty ? style.closeSpanHied :style.closeSpan} > <RiCloseCircleFill /> </span>
+                <span
+                onClick={(e)=> {
+                    e.preventDefault()
+                    setInputValue('')}}
+                className={!inputIsEmpty ? style.closeSpanHied :style.closeSpan} 
+                > <RiCloseCircleFill /> </span>
             </div>
             <div className={style.accountContainer} >
                 <div className={style.lengContainer}>
