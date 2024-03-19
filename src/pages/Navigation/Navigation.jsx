@@ -37,7 +37,7 @@ function Navigation() {
             </div>
             <div className={style.accountContainer} >
                 <div className={style.lengContainer}>
-                    
+                    ARM
                 </div>
                 <div className={style.singContainer}>
                     <button>Sing In</button>
