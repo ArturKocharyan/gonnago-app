@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Categories from "./Categories/Categories";
 import style from "./style.module.css"
@@ -7,7 +7,10 @@ function Menu() {
 
     const menuItems = useSelector((state) => state.menu)
     const [selectItemId, setSelectItemId] = useState(1)
-    const [navChilds, setNavChilds] = useState(menuItems.menu.data[0].childs)
+    const [navChilds, setNavChilds] = useState()
+
+
+    console.log(menuItems.menu)
 
     return (
         <div>

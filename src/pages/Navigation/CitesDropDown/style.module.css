@@ -110,3 +110,19 @@ ul {
     margin-top: 5px;
     margin-left: 5px;
 }
+
+.listContainer::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+.listContainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.listContainer::-webkit-scrollbar-thumb {
+    background: rgb(90, 90, 90);
+    border-radius: 10px;
+}
