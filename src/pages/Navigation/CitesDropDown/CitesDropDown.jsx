@@ -146,8 +146,8 @@ function CitesDropDown({ list }) {
           </div>
         }
         trigger="click"
-        visible={visible}
-        onVisibleChange={setVisible}
+        open={visible}
+        onOpenChange={setVisible}
       >
         <div className={style.citiesBtn}>
           {title}
