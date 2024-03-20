@@ -90,6 +90,19 @@ li {
         grid-template-columns: auto;
         row-gap: 8px;
     }
+    .footerContainer {
+        display: flex;
+        height: 526px;
+        background-color: #ffffff;
+        max-width: 1215px;
+        width: 400px;
+        padding: 5%;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .firstDiv {
+        margin-bottom: 50px;
+    }
 }
 
 .footer {
