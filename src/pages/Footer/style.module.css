@@ -95,13 +95,39 @@ li {
         height: 526px;
         background-color: #ffffff;
         max-width: 1215px;
-        width: 400px;
+        width: 80%;
         padding: 5%;
         flex-direction: column;
         margin-left: 0;
     }
     .firstDiv {
         margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 432px) {
+    .feedBack {
+        grid-template-columns: auto;
+        row-gap: 8px;
+    }
+    .footerContainer {
+        display: flex;
+        height: 526px;
+        background-color: #ffffff;
+        width: 432px;
+        padding: 5%;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .firstDiv {
+        margin-bottom: 50px;
+    }
+    .inputContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .inputContainer input {
+        height: 80px;
     }
 }
 
