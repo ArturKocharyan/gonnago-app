@@ -37,6 +37,7 @@ function DrawerSearch() {
                 open={open}
                 key={"bottom"}
                 enterButton="Search"
+                height={"90%"}
                 extra={
                     <Space>
                         <span onClick={onClose}>

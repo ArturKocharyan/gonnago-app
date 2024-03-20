@@ -3,6 +3,7 @@ import style from "./style.module.css"
 import quar from '../../assets/img/download1.png'
 import { FaFacebookSquare,FaTwitter } from "react-icons/fa";
 import { AiOutlineInstagram } from "react-icons/ai";
+import { Divider } from "antd";
 
 function Footer() {
     return (
@@ -55,8 +56,10 @@ function Footer() {
                     </div>
                 </ul>
             </div>
-            <div>
-
+            <Divider />
+            <div className={style.footer} >
+                <p>© 2023 GonnaGo: Բոլոր իրավունքները պաշտպանված են</p>
+                <p>Designed & Develop by Brain Fors</p>
             </div>
         </div>
     )

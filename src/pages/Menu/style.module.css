@@ -26,15 +26,6 @@
     display: none;
 }
 
-.navMenu::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-
-.navMenu::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-}
-
 .menuItems {
     display: flex;
     flex-direction: column;
@@ -89,4 +80,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
+}
+
+@media screen and (max-width: 876px) {
 }

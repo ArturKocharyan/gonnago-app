@@ -44,8 +44,9 @@
 .inputBTN {
     background-color: #6E64AC;
     height: 100%;
+    width: 100%;
     border-radius: 23px;
-    width: 176px;
+    max-width: 176px;
     border: 1px #6E64AC;
     color: white;
     cursor: pointer;
@@ -81,5 +82,20 @@ li {
     display: flex;
     align-items: center;
     font-size: 30.63px;
-    
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    color: #4e4e4e;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: .2px;
 }

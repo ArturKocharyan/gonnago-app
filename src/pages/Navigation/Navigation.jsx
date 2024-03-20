@@ -11,7 +11,6 @@ import DrawerLang from "./DrawerLang/DrawerLang";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import DrawerSearch from "./DrawerSearch/DrawerSearch";
 
-
 function Navigation() {
   const [inputValue, setInputValue] = useState("");
   const [inputIsEmpty, setInputIsEmpty] = useState(false);
@@ -66,7 +65,7 @@ function Navigation() {
           <button>Sing In</button>
         </div>
       </div>
-      
+
       <span className={style.alterSearch} >
         <DrawerSearch />
       </span>
