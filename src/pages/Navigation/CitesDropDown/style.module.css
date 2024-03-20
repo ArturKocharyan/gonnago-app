@@ -158,5 +158,6 @@ ul {
         width: 100%;
         justify-content: space-between;
         text-transform: capitalize;
+        margin-right: 10px
     }
 }

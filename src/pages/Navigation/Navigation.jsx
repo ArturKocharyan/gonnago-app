@@ -37,8 +37,7 @@ function Navigation() {
       </div>
       <div className={style.searchContainer}>
         <span>
-          {" "}
-          <img src={search} alt="search" />{" "}
+          <img src={search} alt="search" />
         </span>
         <input
           placeholder="MOVE"
@@ -55,8 +54,7 @@ function Navigation() {
           }}
           className={!inputIsEmpty ? style.closeSpanHied : style.closeSpan}
         >
-          {" "}
-          <RiCloseCircleFill />{" "}
+          <RiCloseCircleFill />
         </span>
       </div>
       <div className={style.accountContainer}>
@@ -78,7 +76,7 @@ function Navigation() {
       {mobailMenu === true && (
         <div className={style.menuBody}>
           <div className={style.citiesMenu} >
-            <CitesDropDown list={citiesList} />{" "}
+            <CitesDropDown list={citiesList} />
           </div>
           <div className={style.langMenu} >
             <DrawerLang />

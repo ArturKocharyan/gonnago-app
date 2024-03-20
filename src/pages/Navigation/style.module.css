@@ -42,7 +42,7 @@
     border: none;
     height: 70%;
     margin-top: 1%;
-    width: 98%;
+    width: 95%;
     margin-right: 2%;
 }
 
@@ -132,6 +132,18 @@ input:focus {
     .langMenu {
         display: flex;
         width: 100%;
+    }
+    .singContainer {
+        width: 95%;
+        margin-top: 10px;
+    }
+    .searchContainer {
+        width: 50%;
+    }
+
+    .searchContainer input {
+        margin-top: 3%;
+        margin-right: 6%;
     }
 
   }

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Drawer } from 'antd';
 import style from "./style.module.css"
-import { BsChevronDown } from "react-icons/bs"; 
+import { BsChevronDown } from "react-icons/bs";
+import { AiOutlineCheck } from "react-icons/ai";
 
 function DrawerLang() {
 
     const [open, setOpen] = useState(false);
     const [selectedLang, setSelectedLang] = useState('AM')
+    const [checkID, setCheckID] = useState(1)
     const langArr = [
         {
             id: 1,
@@ -40,7 +42,7 @@ function DrawerLang() {
                 <span>{selectedLang}</span><span><BsChevronDown /></span>
             </div>
             <Drawer
-                title="Basic Drawer"
+                title="Լեզու"
                 placement={"bottom"}
                 closable={false}
                 onClose={onClose}
@@ -51,7 +53,14 @@ function DrawerLang() {
                     {
                         langArr.map((item) => {
                             return (
-                                <div  key={item.id} onClick={() => selectLang(item.title)} >{item.title}</div>
+                                <div
+                                    className={style.itemDiv}
+                                    key={item.id}
+                                    onClick={() => {
+                                        selectLang(item.title)
+                                        setCheckID(item.id)
+                                    }}
+                                >{item.title}<span className={checkID === item.id ? style.checked : style.notChecked} ><AiOutlineCheck /></span></div>
                             )
                         })
                     }

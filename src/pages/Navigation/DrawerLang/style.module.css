@@ -9,4 +9,21 @@
     text-transform: capitalize;
     margin-left: 4%;
     margin-top: 10px;
+    margin-right: 10px
+}
+
+.itemDiv {
+    display: flex;
+    height: 30px;
+    font-size: larger;
+}
+
+.checked {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+.notChecked {
+    display: none;
 }
