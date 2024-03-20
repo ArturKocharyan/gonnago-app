@@ -80,9 +80,16 @@ li {
 }
 
 .feedBack {
-    display: flex;
-    align-items: center;
-    font-size: 30.63px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 8px;
+}
+
+@media screen and (max-width: 876px) {
+    .feedBack {
+        grid-template-columns: auto;
+        row-gap: 8px;
+    }
 }
 
 .footer {

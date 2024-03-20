@@ -1,9 +1,10 @@
 import React from "react";
 import style from "./style.module.css"
 import quar from '../../assets/img/download1.png'
-import { FaFacebookSquare,FaTwitter } from "react-icons/fa";
-import { AiOutlineInstagram } from "react-icons/ai";
 import { Divider } from "antd";
+import Instagram from "../../assets/logos/Instagram";
+import Twitter from "../../assets/logos/Twitter";
+import FaceBook from "../../assets/logos/FaceBook";
 
 function Footer() {
     return (
@@ -50,9 +51,9 @@ function Footer() {
                 <ul>
                     <li>Հետադարձ կապ</li>
                     <div className={style.feedBack} >
-                    <FaFacebookSquare />
-                    <FaTwitter />
-                    <AiOutlineInstagram />
+                    <Instagram />
+                    <Twitter />
+                    <FaceBook />
                     </div>
                 </ul>
             </div>
