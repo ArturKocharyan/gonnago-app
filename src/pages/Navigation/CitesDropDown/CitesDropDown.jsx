@@ -112,6 +112,7 @@ function CitesDropDown({ list }) {
                     <div
                       onClick={() => {
                         setTitle(item.title);
+                        handlePopoverClose();
                       }}
                       className={item.title === title ? style.headerDivsCheck : style.headerDivs}
                       key={item.id}
@@ -131,6 +132,7 @@ function CitesDropDown({ list }) {
                     <li
                       onClick={() => {
                         setTitle(city.title);
+                        handlePopoverClose();
                       }}
                       style={{ cursor: "pointer", marginTop: "2px" }}
                       key={city.id}

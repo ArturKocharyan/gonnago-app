@@ -8,6 +8,9 @@ import CitesDropDown from "./CitesDropDown/CitesDropDown";
 import { useSelector } from "react-redux";
 import { RxHamburgerMenu } from "react-icons/rx";
 import DrawerLang from "./DrawerLang/DrawerLang";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import DrawerSearch from "./DrawerSearch/DrawerSearch";
+
 
 function Navigation() {
   const [inputValue, setInputValue] = useState("");
@@ -22,8 +25,6 @@ function Navigation() {
       setInputIsEmpty(false);
     }
   }, [inputValue]);
-
-  console.log(mobailMenu);
 
   return (
     <div className={style.mainContainer}>
@@ -65,12 +66,16 @@ function Navigation() {
           <button>Sing In</button>
         </div>
       </div>
+      
+      <span className={style.alterSearch} >
+        <DrawerSearch />
+      </span>
       <div
         onClick={() => setMobailMenu(!mobailMenu)}
         className={style.burgerMenu}
       >
         <span>
-          <RxHamburgerMenu />
+          {!mobailMenu ?<RxHamburgerMenu /> : <HiOutlineMenuAlt3 /> }
         </span>
       </div>
       {mobailMenu === true && (
