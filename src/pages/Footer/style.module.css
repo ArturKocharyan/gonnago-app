@@ -12,7 +12,7 @@
 .firstDiv {
  display: flex;
  height: 139px;
- width: 852px;
+ max-width: 852px;
 }
 
 .firstContent {
@@ -37,14 +37,15 @@
     border-width: 1px;
     border-style: solid;
     border-color: #ffffff;
-    width: 465px;
+    max-width: 465px;
     border-radius: 72px;
     height: 100%;
+    width: 80%;
 }
 .inputBTN {
     background-color: #6E64AC;
     height: 100%;
-    width: 100%;
+    width: 25%;
     border-radius: 23px;
     max-width: 176px;
     border: 1px #6E64AC;
@@ -98,4 +99,8 @@ li {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: .2px;
+}
+
+.textStyle {
+    display: flex;
 }

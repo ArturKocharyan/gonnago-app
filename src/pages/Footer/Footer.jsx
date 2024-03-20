@@ -13,7 +13,7 @@ function Footer() {
                     <img src={quar} alt="quar" />
                 </div>
                 <div className={style.firstContent} >
-                    <div style={{ size: "16px", lineHeight: "21.42px" }} >
+                    <div style={{ size: "16px", lineHeight: "21.42px", fontWeight: '500' }} >
                         Մենք միշտ ձգտում ենք լինել նորարար և ստեղծագործ մեր աշխատանքում, իսկ մեր ամենամեծ ճանաչումը ձեր գոհունակությունը, անվտանգությունը
                     </div>
                     <div className={style.inputContent} >
