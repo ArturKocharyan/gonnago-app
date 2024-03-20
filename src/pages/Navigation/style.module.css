@@ -120,10 +120,18 @@ input:focus {
         width: 40px;
     }
     .menuBody {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    }
+    .citiesMenu {
         display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+        width: 100%;
+    }
+    .langMenu {
+        display: flex;
+        width: 100%;
     }
 
   }

@@ -73,7 +73,7 @@ function CitesDropDown({ list }) {
   };
 
   return (
-    <div>
+    <div className={style.mainContainer} >
       <Popover
         content={
           <div className={style.citiesContainer}>

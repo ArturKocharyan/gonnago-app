@@ -20,6 +20,19 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 14px;
+    overflow-x: auto;
+}
+.navMenu::-webkit-scrollbar {
+    display: none;
+}
+
+.navMenu::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.navMenu::-webkit-scrollbar-thumb {
+    border-radius: 10px;
 }
 
 .menuItems {

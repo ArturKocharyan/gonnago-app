@@ -7,6 +7,7 @@ import DropDownLang from "./DropDownLang/DropDownLang";
 import CitesDropDown from "./CitesDropDown/CitesDropDown";
 import { useSelector } from "react-redux";
 import { RxHamburgerMenu } from "react-icons/rx";
+import DrawerLang from "./DrawerLang/DrawerLang";
 
 function Navigation() {
   const [inputValue, setInputValue] = useState("");
@@ -76,11 +77,11 @@ function Navigation() {
       </div>
       {mobailMenu === true && (
         <div className={style.menuBody}>
-          <div>
+          <div className={style.citiesMenu} >
             <CitesDropDown list={citiesList} />{" "}
           </div>
-          <div>
-            <DropDownLang />
+          <div className={style.langMenu} >
+            <DrawerLang />
           </div>
           <div className={style.singContainer}>
             <button>Sing In</button>

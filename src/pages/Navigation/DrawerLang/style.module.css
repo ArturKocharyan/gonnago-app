@@ -1,0 +1,12 @@
+.mainContainer {
+    display: flex;
+    width: 100%;
+}
+.btn {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: capitalize;
+    margin-left: 4%;
+    margin-top: 10px;
+}
