@@ -80,8 +80,7 @@ li {
 }
 
 .feedBack {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
+    display: inline-flex;
     column-gap: 8px;
 }
 
@@ -103,6 +102,10 @@ li {
     .firstDiv {
         margin-bottom: 50px;
     }
+    .secondDiv {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
 }
 @media screen and (max-width: 432px) {
     .feedBack {
@@ -113,7 +116,7 @@ li {
         display: flex;
         height: 526px;
         background-color: #ffffff;
-        width: 432px;
+        width: 373px;
         padding: 5%;
         flex-direction: column;
         margin-left: 0;
@@ -128,6 +131,10 @@ li {
     }
     .inputContainer input {
         height: 80px;
+    }
+    .inputBTN {
+        margin-top: 10px;
+        width: 62%;
     }
 }
 
