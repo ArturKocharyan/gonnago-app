@@ -10,6 +10,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import DrawerLang from "./DrawerLang/DrawerLang";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import DrawerSearch from "./DrawerSearch/DrawerSearch";
+import DrawerCities from "./DrawerCities/DrawerCtits";
 
 function Navigation() {
   const [inputValue, setInputValue] = useState("");
@@ -80,11 +81,13 @@ function Navigation() {
       {mobailMenu === true && (
         <div className={style.menuBody}>
           <div className={style.citiesMenu} >
-            <CitesDropDown list={citiesList} />
+            {/* <CitesDropDown list={citiesList} /> */}
+            <DrawerCities list={citiesList} />
           </div>
           <div className={style.langMenu} >
             <DrawerLang />
           </div>
+          
           <div className={style.singContainer}>
             <button>Sing In</button>
           </div>
