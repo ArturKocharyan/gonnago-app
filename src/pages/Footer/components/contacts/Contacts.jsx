@@ -27,7 +27,7 @@ function Contacts() {
                 </ul>
                 <ul>
                     <li>Հետադարձ կապ</li>
-                    <div >
+                    <div className={style.social} >
                     <Instagram />
                     <Twitter />
                     <FaceBook />

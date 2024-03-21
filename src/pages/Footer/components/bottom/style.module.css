@@ -1,0 +1,15 @@
+.main_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_container  p {
+    color: #4e4e4e;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: .2px;
+}
