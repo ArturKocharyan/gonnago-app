@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Categories from "./Categories/Categories";
 import style from "./style.module.css"
@@ -91,10 +91,28 @@ function Menu() {
         }
     ])
 
+    const elRef = useRef();
+    useEffect(() => {
+        const el = elRef.current;
+        if (el) {
+            const onWheel = e => {
+                if (e.deltaY === 0) return;
+                e.preventDefault();
+                el.scrollTo({
+                    left: el.scrollLeft + e.deltaY,
+                    behavior: "smooth"
+                });
+            };
+            el.addEventListener("wheel", onWheel);
+            return () => el.removeEventListener("wheel", onWheel);
+        }
+    }, []);
+   
+
     return (
         <div>
             <div className={style.mainContainerNav}>
-                <div className={style.navMenu} >
+                <div className={style.navMenu} ref={elRef} >
                     {
                         menuItems.menu.data?.map((item) => {
                             return (
@@ -111,7 +129,7 @@ function Menu() {
                                     >{item.title}
                                     </div  >
                                     <div className={style.containerSpan} >
-                                      <div className={selectItemId === item.id ? style.selectMenuSpan : style.menuSpan} />
+                                        <div className={selectItemId === item.id ? style.selectMenuSpan : style.menuSpan} />
                                     </div>
                                 </div>
                             )
