@@ -29,7 +29,6 @@ function Test() {
                 </div>
             </div>
             <div className={style.secondDiv} >
-
                 <ul>
                     <li>GonnaGo </li>
                     <li>Մեր մասին</li>

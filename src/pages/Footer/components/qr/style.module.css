@@ -60,8 +60,12 @@
     .input_container {
         flex-direction: column; 
     }
+    .input_container input {
+        width: 100%;
+    }
     .input_container span {
-        width: 78%;
+        margin-top: 10px;
+        width: 100%;
     }
     .button {
         width: 100%;
