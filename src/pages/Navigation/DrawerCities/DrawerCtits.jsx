@@ -5,25 +5,7 @@ import { BsSearch } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
 import { AiOutlineCheck } from "react-icons/ai";
-
-const headerCities = [
-    {
-        id: 1,
-        title: "Armenia",
-    },
-    {
-        id: 2,
-        title: "Gyumri",
-    },
-    {
-        id: 3,
-        title: "Yerevan",
-    },
-    {
-        id: 4,
-        title: "Vanadzor",
-    },
-];
+import headerCities from "../../../assets/staticCities";
 
 function DrawerCities({ list }) {
     const [open, setOpen] = useState(false);

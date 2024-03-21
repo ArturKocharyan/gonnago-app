@@ -1,13 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Categories from "./Categories/Categories";
 import style from "./style.module.css"
+import { getMenuStatus, getMenu } from "../../redux/slices/menuSlice";
 
 function Menu() {
 
     const menuItems = useSelector((state) => state.menu)
     const [selectItemId, setSelectItemId] = useState(1)
     const [navChilds, setNavChilds] = useState()
+    const dispatch = useDispatch()
+    const menuStatus = useSelector(getMenuStatus)
+
+    useEffect(() => {
+        if (menuStatus === 'idle') {
+          dispatch(getMenu());
+        }
+      }, [menuStatus, dispatch]);
 
     useEffect(() => {
         if (menuItems.menu && menuItems.menu.data && menuItems.menu.data[0] && menuItems.menu.data[0].childs) {
