@@ -10,17 +10,17 @@
 }
 
 .firstDiv {
- display: flex;
- height: 139px;
- max-width: 852px;
+    display: flex;
+    height: 139px;
+    max-width: 852px;
 }
 
 .firstContent {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 15px; 
-    width: 655px; 
+    margin-left: 15px;
+    width: 655px;
 }
 
 .inputContainer {
@@ -28,10 +28,12 @@
     height: 40px;
     justify-content: space-between;
 }
+
 .inputContent {
     display: flex;
     flex-direction: column;
 }
+
 .inputContent input {
     background: #F8F6FC;
     border-width: 1px;
@@ -42,6 +44,7 @@
     height: 100%;
     width: 80%;
 }
+
 .inputBTN {
     background-color: #6E64AC;
     height: 100%;
@@ -84,11 +87,28 @@ li {
     column-gap: 8px;
 }
 
+.content {
+    size: 16px;
+    line-height: 21.42px;
+    font-weight: 500;
+}
+
 @media screen and (max-width: 876px) {
     .feedBack {
         grid-template-columns: auto;
         row-gap: 8px;
     }
+
+    .content {
+        size: 16px;
+        line-height: 21.42px;
+        font-weight: 500;
+        width: 85%;
+        margin-bottom: 10px;
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+
     .footerContainer {
         display: flex;
         height: 526px;
@@ -99,19 +119,52 @@ li {
         flex-direction: column;
         margin-left: 0;
     }
+
     .firstDiv {
-        margin-bottom: 50px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        margin-right: 20px;
     }
+
     .secondDiv {
         display: grid;
         grid-template-columns: auto auto;
     }
+
+    .inputContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 70%;
+    }
+
+    .inputContainer input {
+        height: 80px;
+    }
+
+    .inputBTN {
+        margin-top: 10px;
+        width: 62%;
+    }
+
+    .quarDiv {
+        display: flex;
+        /* justify-content: center; */
+        /* margin-left: -30%; */
+        padding-bottom: 5px;
+        margin-left: 40%;
+        margin-right: 50%;
+    }
 }
+
 @media screen and (max-width: 432px) {
     .feedBack {
         grid-template-columns: auto;
         row-gap: 8px;
     }
+
     .footerContainer {
         display: flex;
         height: 526px;
@@ -121,20 +174,49 @@ li {
         flex-direction: column;
         margin-left: 0;
     }
+
     .firstDiv {
-        margin-bottom: 50px;
+        display: flex;
+        height: 139px;
+        max-width: 852px;
+        flex-direction: column;
+        margin-bottom: 43%;
+        width: 100%;
     }
+
+    .secondDiv {
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 50%;
+    }
+
     .inputContainer {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        width: 155%;
     }
+
     .inputContainer input {
         height: 80px;
     }
+
     .inputBTN {
         margin-top: 10px;
         width: 62%;
+    }
+
+    .firstContent {
+        display: flex;
+        flex-direction: column;
+        /* margin-left: 15px; */
+        width: 275px;
+    }
+
+    .quarDiv {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5px;
     }
 }
 

@@ -10,11 +10,11 @@ function Footer() {
     return (
         <div className={style.footerContainer} >
             <div className={style.firstDiv} >
-                <div>
+                <div className={style.quarDiv} >
                     <img src={quar} alt="quar" />
                 </div>
                 <div className={style.firstContent} >
-                    <div style={{ size: "16px", lineHeight: "21.42px", fontWeight: '500' }} >
+                    <div className={style.content} >
                         Մենք միշտ ձգտում ենք լինել նորարար և ստեղծագործ մեր աշխատանքում, իսկ մեր ամենամեծ ճանաչումը ձեր գոհունակությունը, անվտանգությունը
                     </div>
                     <div className={style.inputContent} >
