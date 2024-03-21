@@ -9,7 +9,9 @@
     text-transform: capitalize;
     margin-left: 16px;
     margin-top: 10px;
-    margin-right: 10px
+    margin-right: 10px;
+    cursor: pointer;
+    
 }
 
 .itemDiv {

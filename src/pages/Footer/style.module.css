@@ -83,30 +83,15 @@ li {
 }
 
 .feedBack {
-    display: inline-flex;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
     column-gap: 8px;
-}
-
-.content {
-    size: 16px;
-    line-height: 21.42px;
-    font-weight: 500;
 }
 
 @media screen and (max-width: 876px) {
     .feedBack {
         grid-template-columns: auto;
         row-gap: 8px;
-    }
-
-    .content {
-        size: 16px;
-        line-height: 21.42px;
-        font-weight: 500;
-        width: 85%;
-        margin-bottom: 10px;
-        padding-right: 20px;
-        margin-right: 20px;
     }
 
     .footerContainer {
@@ -121,41 +106,23 @@ li {
     }
 
     .firstDiv {
-        margin-bottom: 100px;
-        display: flex;
+        margin-bottom: 115px;
         flex-direction: column;
-        height: 40%;
-        margin-right: 20px;
-    }
-
-    .secondDiv {
-        display: grid;
-        grid-template-columns: auto auto;
     }
 
     .inputContainer {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        height: 70%;
-    }
-
-    .inputContainer input {
         height: 80px;
-    }
-
-    .inputBTN {
-        margin-top: 10px;
-        width: 62%;
+        flex-direction: column;
     }
 
     .quarDiv {
         display: flex;
-        /* justify-content: center; */
-        /* margin-left: -30%; */
-        padding-bottom: 5px;
-        margin-left: 40%;
-        margin-right: 50%;
+        justify-content: center;
+    }
+
+    .content {
+        max-width: 68%;
+        margin-bottom: 8px;
     }
 }
 
@@ -169,54 +136,24 @@ li {
         display: flex;
         height: 526px;
         background-color: #ffffff;
-        width: 373px;
+        width: 432px;
         padding: 5%;
         flex-direction: column;
         margin-left: 0;
     }
 
     .firstDiv {
-        display: flex;
-        height: 139px;
-        max-width: 852px;
-        flex-direction: column;
-        margin-bottom: 43%;
-        width: 100%;
-    }
-
-    .secondDiv {
-        display: grid;
-        grid-template-columns: auto;
-        margin-top: 50%;
+        margin-bottom: 50px;
     }
 
     .inputContainer {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        width: 155%;
     }
 
     .inputContainer input {
         height: 80px;
-    }
-
-    .inputBTN {
-        margin-top: 10px;
-        width: 62%;
-    }
-
-    .firstContent {
-        display: flex;
-        flex-direction: column;
-        /* margin-left: 15px; */
-        width: 275px;
-    }
-
-    .quarDiv {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 5px;
     }
 }
 

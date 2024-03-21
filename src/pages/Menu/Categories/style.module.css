@@ -4,8 +4,9 @@
     height: 5rem;
     display: flex;
     align-items: center;
-    white-space: break-spaces;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 14px;
+    overflow-x: auto;
 }
 
 .itemsDiv{

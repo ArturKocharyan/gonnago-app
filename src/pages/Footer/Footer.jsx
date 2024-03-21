@@ -22,7 +22,7 @@ function Footer() {
                             Հետևեք շաբաթվա գլխավոր իրադարձություններին
                         </div>
                         <div className={style.inputContainer} >
-                            <input />
+                            <input /> 
                             <button className={style.inputBTN} >Բաժանորդագրվել</button>
                         </div>
                     </div>
