@@ -9,6 +9,14 @@ function Menu() {
     const [selectItemId, setSelectItemId] = useState(1)
     const [navChilds, setNavChilds] = useState()
 
+    useEffect(() => {
+        if (menuItems.menu && menuItems.menu.data && menuItems.menu.data[0] && menuItems.menu.data[0].childs) {
+            setNavChilds(menuItems.menu.data[0].childs);
+        } else {
+            setNavChilds([]);
+        }
+    }, [menuItems]);
+
     const elRef = useRef();
     useEffect(() => {
         const el = elRef.current;

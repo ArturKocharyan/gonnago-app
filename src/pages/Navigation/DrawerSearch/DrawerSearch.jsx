@@ -9,38 +9,28 @@ function DrawerSearch() {
     const [open, setOpen] = useState(false);
     const [inputValue, setInputValue] = useState('')
     const [switchBtn, setSwitchBtn] = useState(false)
-    const showDrawer = () => {
-        setOpen(true);
-    };
-    const onClose = () => {
-        setOpen(false);
-    };
 
     useEffect(() => {
-        if(inputValue.length > 0) {
-            setSwitchBtn(true)
-        }else {
-            setSwitchBtn(false)
-        }
+        inputValue.length > 0 ? setSwitchBtn(true) : setSwitchBtn(false)
     },[inputValue])
 
     return (
         <div className={style.mainContainer} >
-            <div onClick={showDrawer}>
+            <div onClick={() => setOpen(!open)}>
                 <BsSearch />
             </div>
             <Drawer
                 title="Որոնում"
                 placement={"bottom"}
                 closable={false}
-                onClose={onClose}
+                onClose={() => setOpen(!open)}
                 open={open}
                 key={"bottom"}
                 enterButton="Search"
                 height={"90%"}
                 extra={
                     <Space>
-                        <span onClick={onClose}>
+                        <span onClick={() => setOpen(!open)}>
                             <GrClose />
                         </span>
                     </Space>

@@ -61,16 +61,9 @@ function CitesDropDown({ list }) {
   );
 
   useEffect(() => {
-    if (inputValue.length !== 0) {
-      setIsActive(true);
-    } else {
-      setIsActive(false);
-    }
+    inputValue.length !== 0 ? setIsActive(true) : setIsActive (false)
   }, [inputValue]);
 
-  const handlePopoverClose = () => {
-    setVisible(false);
-  };
 
   return (
     <div className={style.mainContainer} >
@@ -81,7 +74,7 @@ function CitesDropDown({ list }) {
               <span>
                 <p>City</p>
               </span>
-              <span onClick={handlePopoverClose}>
+              <span onClick={() => setVisible(false)}>
                 <CgClose />
               </span>
             </div>
@@ -112,7 +105,7 @@ function CitesDropDown({ list }) {
                     <div
                       onClick={() => {
                         setTitle(item.title);
-                        handlePopoverClose();
+                        setVisible(false);
                       }}
                       className={item.title === title ? style.headerDivsCheck : style.headerDivs}
                       key={item.id}
@@ -132,7 +125,7 @@ function CitesDropDown({ list }) {
                     <li
                       onClick={() => {
                         setTitle(city.title);
-                        handlePopoverClose();
+                        setVisible(false);
                       }}
                       style={{ cursor: "pointer", marginTop: "2px" }}
                       key={city.id}

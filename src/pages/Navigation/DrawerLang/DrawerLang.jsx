@@ -24,13 +24,6 @@ function DrawerLang() {
         }
     ]
 
-    const showDrawer = () => {
-        setOpen(true);
-    };
-    const onClose = () => {
-        setOpen(false);
-    };
-
     function selectLang(lang) {
         setSelectedLang(lang)
         setOpen(false)
@@ -38,14 +31,14 @@ function DrawerLang() {
 
     return (
         <div className={style.mainContainer} >
-            <div className={style.btn} type="primary" onClick={showDrawer}>
+            <div className={style.btn} type="primary" onClick={() => setOpen(!open)}>
                 <span>{selectedLang}</span><span><BsChevronDown /></span>
             </div>
             <Drawer
                 title="Լեզու"
                 placement={"bottom"}
                 closable={false}
-                onClose={onClose}
+                onClose={() => setOpen(!open)}
                 open={open}
                 key={"bottom"}
             >

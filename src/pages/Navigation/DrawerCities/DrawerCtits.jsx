@@ -31,12 +31,6 @@ function DrawerCities({ list }) {
     const [isActive, setIsActive] = useState(false);
     const [title, setTitle] = useState(headerCities[0].title);
     const citiesData = list.cities.data;
-    const showDrawer = () => {
-        setOpen(true);
-    };
-    const onClose = () => {
-        setOpen(false);
-    };
 
     const groupByFirstLetter = (cities) => {
         const grouped = {};
@@ -66,23 +60,19 @@ function DrawerCities({ list }) {
     );
 
     useEffect(() => {
-        if (inputValue.length !== 0) {
-            setIsActive(true);
-        } else {
-            setIsActive(false);
-        }
-    }, [inputValue]);
+        inputValue.length !== 0 ? setIsActive(true) : setIsActive (false)
+      }, [inputValue]);
 
     return (
         <div className={style.mainContainer}>
-            <div className={style.btn} type="primary" onClick={showDrawer}>
+            <div className={style.btn} type="primary" onClick={() => setOpen(!open)}>
                 <span>{title}</span><span><BsChevronDown /></span>
             </div>
             <Drawer
                 title="Քաղաք"
                 placement={"bottom"}
                 closable={false}
-                onClose={onClose}
+                onClose={() => setOpen(!open)}
                 open={open}
                 key={"bottom"}
                 height={"90%"}
@@ -115,7 +105,7 @@ function DrawerCities({ list }) {
                             <div
                                 onClick={() => {
                                     setTitle(item.title);
-                                    onClose();
+                                    setOpen(!open);
                                 }}
                                 className={item.title === title ? style.headerDivsCheck : style.headerDivs}
                                 key={item.id}
@@ -133,7 +123,7 @@ function DrawerCities({ list }) {
                                 <li
                                     onClick={() => {
                                         setTitle(city.title);
-                                        onClose();
+                                        setOpen(!open);
                                     }}
                                     style={{ cursor: "pointer", marginTop: "2px" }}
                                     key={city.id}

@@ -19,11 +19,7 @@ function Navigation() {
   const [mobailMenu, setMobailMenu] = useState(false);
 
   useEffect(() => {
-    if (inputValue.length !== 0) {
-      setInputIsEmpty(true);
-    } else {
-      setInputIsEmpty(false);
-    }
+    inputValue.length !== 0 ? setInputIsEmpty(true) : setInputIsEmpty (false)
   }, [inputValue]);
 
   return (
