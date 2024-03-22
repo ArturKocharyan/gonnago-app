@@ -24,7 +24,7 @@ function DropDownLang() {
     return (
         <div>
             <Dropdown overlay={menu} trigger={['click']}>
-                <div style={{display:"flex",justifyContent: "space-between",width: "46px", cursor: "pointer"}} onClick={e => e.preventDefault()}>
+                <div className={style.down_button} onClick={e => e.preventDefault()}>
                     <div className={style.test} >{lang}</div>
                     <div className={style.icon} ><BsChevronDown /></div>
                 </div>
