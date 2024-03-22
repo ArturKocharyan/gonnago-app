@@ -15,8 +15,6 @@ function CitesDropDown({ list }) {
   const [title, setTitle] = useState(headerCities[0].title);
   const [visible, setVisible] = useState(false);
   const citiesData = list.cities.data;
-
- 
   const groupedCities = useGroupByFirstLetter(citiesData);
 
   const filteredCities = Object.entries(groupedCities).reduce(
