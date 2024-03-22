@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Categories from "./Categories/Categories";
 import style from "./style.module.css"
 import { getMenuStatus, getMenu } from "../../redux/slices/menuSlice";
+import useSmoothScroll from "../../hooks/useSmoothScroll";
 
 function Menu() {
 
@@ -11,6 +12,7 @@ function Menu() {
     const [navChilds, setNavChilds] = useState()
     const dispatch = useDispatch()
     const menuStatus = useSelector(getMenuStatus)
+    const elRef = useSmoothScroll();
 
     useEffect(() => {
         if (menuStatus === 'idle') {
@@ -26,22 +28,7 @@ function Menu() {
         }
     }, [menuItems]);
 
-    const elRef = useRef();
-    useEffect(() => {
-        const el = elRef.current;
-        if (el) {
-            const onWheel = e => {
-                if (e.deltaY === 0) return;
-                e.preventDefault();
-                el.scrollTo({
-                    left: el.scrollLeft + e.deltaY,
-                    behavior: "smooth"
-                });
-            };
-            el.addEventListener("wheel", onWheel);
-            return () => el.removeEventListener("wheel", onWheel);
-        }
-    }, []);
+
    
 
     return (

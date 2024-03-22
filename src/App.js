@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Navigation />
       <Menu />
-      <div style={{display:"flex", height: '500px'}} ></div>
+      <div className="Stub_div" ></div>
       <Footer />
     </div>
   );
