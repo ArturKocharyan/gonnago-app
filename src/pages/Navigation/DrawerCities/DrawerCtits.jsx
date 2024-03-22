@@ -6,6 +6,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
 import { AiOutlineCheck } from "react-icons/ai";
 import headerCities from "../../../assets/staticCities";
+import useGroupByFirstLetter from "../../../hooks/useGroupByFirstLetter";
 
 function DrawerCities({ list }) {
     const [open, setOpen] = useState(false);
@@ -13,20 +14,7 @@ function DrawerCities({ list }) {
     const [isActive, setIsActive] = useState(false);
     const [title, setTitle] = useState(headerCities[0].title);
     const citiesData = list.cities.data;
-
-    const groupByFirstLetter = (cities) => {
-        const grouped = {};
-        cities?.forEach((city) => {
-            const firstLetter = city.title.charAt(0).toUpperCase();
-            if (grouped[firstLetter]) {
-                grouped[firstLetter].push(city);
-            } else {
-                grouped[firstLetter] = [city];
-            }
-        });
-        return grouped;
-    };
-    const groupedCities = groupByFirstLetter(citiesData);
+    const groupedCities = useGroupByFirstLetter(citiesData);
 
     const filteredCities = Object.entries(groupedCities).reduce(
         (acc, [letter, cities]) => {

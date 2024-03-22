@@ -7,6 +7,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
 import { AiOutlineCheck } from "react-icons/ai";
 import headerCities from "../../../assets/staticCities";
+import useGroupByFirstLetter from "../../../hooks/useGroupByFirstLetter";
 
 function CitesDropDown({ list }) {
   const [inputValue, setInputValue] = useState("");
@@ -15,19 +16,8 @@ function CitesDropDown({ list }) {
   const [visible, setVisible] = useState(false);
   const citiesData = list.cities.data;
 
-  const groupByFirstLetter = (cities) => {
-    const grouped = {};
-    cities?.forEach((city) => {
-      const firstLetter = city.title.charAt(0).toUpperCase();
-      if (grouped[firstLetter]) {
-        grouped[firstLetter].push(city);
-      } else {
-        grouped[firstLetter] = [city];
-      }
-    });
-    return grouped;
-  };
-  const groupedCities = groupByFirstLetter(citiesData);
+ 
+  const groupedCities = useGroupByFirstLetter(citiesData);
 
   const filteredCities = Object.entries(groupedCities).reduce(
     (acc, [letter, cities]) => {
