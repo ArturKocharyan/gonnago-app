@@ -12,8 +12,8 @@ function Qr() {
                 <span className={style.content} >
                     Մենք միշտ ձգտում ենք լինել նորարար և ստեղծագործ մեր աշխատանքում, իսկ մեր ամենամեծ ճանաչումը ձեր գոհունակությունը, անվտանգությունը
                 </span>
-                <div>
-                    <span>
+                <div  >
+                    <span className={style.bottom_container}>
                         Հետևեք շաբաթվա գլխավոր իրադարձություններին
                     </span>
                     <div className={style.input_container} >

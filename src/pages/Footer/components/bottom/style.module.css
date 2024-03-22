@@ -3,13 +3,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom:37px ;
 }
 
 .main_container  p {
-    color: #4e4e4e;
-    font-size: 12px;
+    color: #8F8F8F;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
+    font-weight: 400;
+    line-height: 18.75px;
     letter-spacing: .2px;
 }
