@@ -34,6 +34,7 @@ function CitesDropDown({ list }) {
     inputValue.length !== 0 ? setIsActive(true) : setIsActive (false)
   }, [inputValue]);
 
+  console.log(filteredCities)
 
   return (
     <div className={style.mainContainer} >
